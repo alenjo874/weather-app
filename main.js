@@ -1,6 +1,6 @@
 let button = document.querySelector(".buttons");
 let searchResults = document.querySelector(".search-results");
-//searchResults.style.display = "none";
+searchResults.style.display = "none";
 
 /* let myFunc = () => {
   const input = document.querySelector(".search-lookup");
@@ -47,5 +47,5 @@ const updateValues = (data) => {
   forecast.innerHTML = `Forecast: ${data.weather[0].description}`;
   tempMin.innerHTML = `Temp Min: ${Math.floor(data.main.temp_min)} &#x2109`;
   tempMax.innerHTML = `Temp Max: ${Math.floor(data.main.temp_max)} &#x2109`;
-  humidity.innerHTML = `Humidity: ${data.main.humidity}`;
+  humidity.innerHTML = `Humidity: ${data.main.humidity}%`;
 };

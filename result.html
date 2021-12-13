@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./result.css" />
+  </head>
+  <body>
+    <div class="flexbox-container">
+      <div class="search-border">
+        <header>
+          <h1 class="login">My Weather App</h1>
+        </header>
+        <div class="search-box">
+          <div class="search-text-box">
+              <div class="search-text-button-container">
+               <input
+              type="text"
+              placeholder="Search here"
+              class="search-lookup"
+            />
+                <button class = "buttons">Search</button>
+               </div>
+           <div class="search-results">
+            <p class="city-result">Search results for: </p>
+              <div class="weather-search-results">                   
+                <div class="flex-results">
+                  <div class="temp-icon">               
+                        <p class="temp">&#x2109</p>
+                        <img src="./screenshots/clouds.png" alt="cloudy day" class="forecast-image">                    
+                  </div> 
+                  <div class="result-desc">
+                    <div class="result-right">                
+                       <p class="city search-text-result"> City, State Zip</p> <hr>
+                       <p class="forecast search-text-result">Forecast:</p> <hr>
+                       <p class="temp-max search-text-result">Temp Max:</p> 
+                    </div>
+                    <div class="result-left">
+                      <p class="wind-gusts search-text-result">Wind Gusts:</p> <hr>  
+                      <p class="humidity search-text-result">Humidity:</p> <hr>        
+                      <p class="temp-min search-text-result">Temp Min:</p> </p>
+                    </div>                   
+                  </div>
+                </div>
+             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./main.js"></script>
+</html>
