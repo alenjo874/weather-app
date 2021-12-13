@@ -9,40 +9,44 @@
   </head>
   <body>
     <div class="flexbox-container">
-      <div id="search-border">
+      <div class="search-border">
         <header>
-          <h1 id="login">My Weather App</h1>
+          <h1 class="login">My Weather App</h1>
         </header>
-        <div id="search-box">
-          <div id="search-text-box">
-            <input
+        <div class="search-box">
+          <div class="search-text-box">
+              <div class="search-text-button-container">
+               <input
               type="text"
               placeholder="Search here"
               class="search-lookup"
             />
-              <button class = "buttons" id="search-button">Search</button>
-              <hr>
-              <div class="search-results">
-                <p>Search results for: Fairview</p>
-                  <div class="weather-search-results">                   
-                    <div id="flex-results">
-                        <div id="result-left">
-                            <p id="temp">37 &#x2109</p>
-                            <p id="city"> Fairview, NJ 07022</p> <hr>
-                            <p id="forecast">Forecast: Intermittent clouds</p> <hr>
-                            <p id="precipitation">Chance of Rain: 0%</p> 
-                       </div> 
-                        <div id="result-right">
-                          <img src="./screenshots/clouds.png" alt="cloudy day">
-                             <p id="wind-gusts">Wind Gusts: 6 mph</p> <hr>          
-                             <p id="air-quality">Air Quality: Fair</p> <hr>
-                             <p id="humidity">Humidity: 27% (Very Dry)</p>
-                        </div>
+                <button class = "buttons">Search</button>
+               </div>
+           <div class="search-results">
+            <p class="city-result">Search results for: </p>
+              <div class="weather-search-results">                   
+                <div class="flex-results">
+                  <div class="result-left">
+                    <p class="temp">&#x2109</p>
+                    <p class="city"> City, State Zip</p> <hr>
+                    <p class="forecast">Forecast:</p> <hr>
+                    <p class="temp-max">Temp Max:</p> 
+                  </div> 
+                 <div class="result-right">
+                    <div class="forecast-image-container">
+                      <img src="./screenshots/clouds.png" alt="cloudy day" class="forecast-image">
                     </div>
-                  </div>
-                 </div>
+                    <p class="wind-gusts">Wind Gusts:</p> <hr>  
+                    <p class="humidity">Humidity:</p> <hr>        
+                    <p class="temp-min">Temp Min:</p> </p>
+                </div>
+                </div>
+                </div>
+          </div>
         </div>
       </div>
     </div>
   </body>
+  <script src="./main.js"></script>
 </html>
