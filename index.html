@@ -5,47 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <div class="flexbox-container">
-      <div class="login-border">
-        <div class="user-icon-container">
-          <img
-            src="./screenshots/usericon.png"
-            alt="user icon"
-            sizes=""
-            class="icon"
-          />
-        </div>
-        <h2 class="login-header">Login</h2>
-        <div class="text-box">
-          <div class="email-text-box">
-            <label for="email" class="email-text">Email</label> <br />
+      <div class="search-border">
+        <header>
+          <h1 class="login">My Weather App</h1>
+        </header>
+        <div class="search-box">
+          <div class="search-text-box">
+              <div class="search-text-button-container">
+               <input
+              type="text"
+              placeholder="Search here"
+              class="search-lookup"
+            />
+                <button class = "buttons">Search</button>
+               </div>
+           <div class="search-results">
+            <p class="city-result">Search results for: </p>
+              <div class="weather-search-results">                   
+                <div class="flex-results">
+                  <div class="temp-icon">               
+                        <p class="temp">&#x2109</p>
+                        <img src="./screenshots/clouds.png" alt="cloudy day" class="forecast-image">                    
+                  </div> 
+                  <div class="result-desc">
+                    <div class="result-right">                
+                       <p class="city search-text-result"> City, State Zip</p> <hr>
+                       <p class="forecast search-text-result">Forecast:</p> <hr>
+                       <p class="temp-max search-text-result">Temp Max:</p> 
+                    </div>
+                    <div class="result-left">
+                      <p class="wind-gusts search-text-result">Wind Gusts:</p> <hr>  
+                      <p class="humidity search-text-result">Humidity:</p> <hr>        
+                      <p class="temp-min search-text-result">Temp Min:</p> </p>
+                    </div>                   
+                  </div>
+                </div>
+             </div>
           </div>
-          <input
-            type="text"
-            placeholder="Enter Email"
-            class="login-credentials"
-          />
-          <br />
-          <div class="password-text-box">
-            <label for="password">Password</label>
-            <br />
-          </div>
-          <input
-            type="password"
-            placeholder="Enter Password"
-            class="login-credentials"
-          />
-        </div>
-        <div class="buttons">
-          <a href="result.html">
-            <button class="login-button" target="_self">Sign In</button> </a
-          ><br />
-          <a href=""><button class="signup-button">Sign Up</button> </a>
         </div>
       </div>
     </div>
   </body>
+  <script src="./main.js"></script>
 </html>
