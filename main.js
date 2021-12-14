@@ -69,4 +69,73 @@ const updateValues = (data) => {
   if (hiddenTab.classList.length > 1) {
     hiddenTab.classList.remove("none");
   }
+
+  // changing icon based on forecast
+  // data.weather[0].id weather ID
+  // data.weather[0].icon[2] day or night (d or n)
+  //  <img src="./screenshots/rainy.png" alt="cloudy day" class="forecast-image">
+
+  const img = document.querySelector(".forecast-image");
+
+  console.log(data.weather[0].id);
+  console.log(data.weather[0].icon[2]);
+
+  //200-232 Thunderstorm
+  if (data.weather[0].id >= 200 && data.weather[0].id <= 232) {
+    img.src = "./screenshots/thunderstorm.png";
+  }
+
+  //300-321 Drizzle
+  if (data.weather[0].id >= 300 && data.weather[0].id <= 321) {
+    img.src = "./screenshots/drizzle.png";
+  }
+
+  //500-531 Rain
+  if (
+    data.weather[0].id >= 500 &&
+    data.weather[0].id <= 531 &&
+    data.weather[0].icon[2] === "d"
+  ) {
+    img.src = "./screenshots/rainy-d.png";
+  } else if (
+    data.weather[0].id >= 500 &&
+    data.weather[0].id <= 531 &&
+    data.weather[0].icon[2] === "n"
+  ) {
+    img.src = "./screenshots/rainy-n.png";
+  }
+
+  //600-622 Snow
+  if (data.weather[0].id >= 600 && data.weather[0].id <= 622) {
+    img.src = "./screenshots/snowfall.png";
+  }
+
+  //800 Clear
+  if (data.weather[0].id === 800 && data.weather[0].icon[2] === "d") {
+    img.src = "./screenshots/clear-d.png";
+  } else if (data.weather[0].id === 800 && data.weather[0].icon[2] === "n") {
+    img.src = "./screenshots/clear-n.png";
+  }
+
+  //801-804 Cloudy
+  if (
+    data.weather[0].id >= 801 &&
+    data.weather[0].id <= 804 &&
+    data.weather[0].icon[2] === "d"
+  ) {
+    img.src = "./screenshots/cloudy-d.png";
+  } else if (
+    data.weather[0].id >= 801 &&
+    data.weather[0].id <= 804 &&
+    data.weather[0].icon[2] === "n"
+  ) {
+    img.src = "./screenshots/cloudy-n.png";
+  }
+
+  // real hot and cold
+  if (data.main.temp >= 100) {
+    img.src = "./screenshots/hot.png";
+  } else if (data.main.temp <= 0) {
+    img.src = "./screenshots/freezing.png";
+  }
 };
